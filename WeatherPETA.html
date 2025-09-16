@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Flood flow-ter</title>
+	<html lang="en">
+	<head>
+		<link rel="stylesheet" href="weather.css">
+		<script src="weather.js" defer></script>
+	</head>
+	<header>
+	<div class="Yeah">
+		<header>Flood
+			<img src="LOGO2.png" style="width: 150px; height: 150px; margin: auto; padding-top: 35px;">
+			Flow-ter
+		</header>
+</div>
+</header>
+	<body>
+		<div class="container">
+		<div class="weather-input">
+			<h3>Enter city name:</h3>
+			<input class="city-input" type text="text" placeholder="e.g., Catbalogan, Manila">
+			<button class="search-btn">Search</button>
+			<div class="separator"></div>
+			<button class="location-btn">Use current location</button>
+		</div>
+
+		<div class = "storm-map">
+	<h2>Weather map</h2>
+	<div class = "map-container"></div>
+	<iframe id="Windyframe"	
+	width = "100%"
+	height = "500"
+	frameborder = "0"
+	src="https://embed.windy.com/embed2.html?lat=11.8&lon=124.9&zoom=6&overlay=rain"
+	allowfullscreen></iframe>
+</div>
+
+
+		<div class="floodimpact">
+<h2>Flood Impact Forecast</h2>
+<p>Rainfall data will appear here after you search a city.</p>
+</div>
+		<div class="weather-data">
+		 <div class="current-weather">
+		 	<div class="details">
+
+				<div class="rainfall-forecast">
+			<h2>Weather forecast</h2>
+			<p>Weather forecast will appear after you search a city.</p>
+		</div>
+		 		
+		 	</div>
+		 </div>
+		 <div class="days-forecast">
+		 	<h2>5-day forecast</h2>
+		 	<ul class="weather-cards">
+		 	<li class="card">
+		 		
+		 	</li>
+		 	<li class="card">
+		 		
+		 	</li>
+		 	<li class="card">
+		 		
+		 	<li class="card">
+		 		
+		 	<li class="card">
+		 		
+		 	</li>
+		 </ul>
+	</div>
+
+	<div class = "information-before">
+	<h2>What to do before a flood:</h2>
+	<img src="emergencykit.png" alt="icon what to do before">
+	<details>
+	<ul>
+		<li>Find out if your area is likely to be flooded from trusted sources (e.g PAGASA, LGU).</li>
+		<li>Learn how your community announces flood warnings, and make sure your family understands it.</li>
+		<li>Keep informed of daily weather condition.</li>
+		<li>Designate an evacuation area for the family and livestock.</li>
+		<li>Assign family members instructions and responsibilities according to an evacuation plan.</li>
+		<li>Keep a stock of food that requires little cooking and refrigerator; electric power may be interrupted.</li>
+		<li>Keep a transistorized radio and flashlight with spare batteries, emergency cooking equipment, candies, matches and first aid kit handy in case of emergency.</li>
+		<li>Store supplies and other household effects above expected flood water level.</li>
+		<li>Strengthen your house and/or objects that may be damaged or swept away by the flood.</li>
+		<p>Source: PAGASA Flood Advisory </p>
+	</ul>
+	</details>
+</div>
+
+<div class="when-warned">
+	<h2>When warned of flooding</h2>
+	<img src="alert.png">
+	<details>
+	<ul>
+		<li>Watch out for rapidly rising flood waters.</li>
+		<li>Listen to your radio for emergency instructions.</li>
+		<li>If you find it necessary to evacuate, move to a safe area before access is cut off by flood waters.</li>
+		<li>Store drinking water in containers, water service may be interrupted.</li>
+		<li>Move household belongings to upper levels.</li>
+		<li>Get livestock to higher ground.</li>
+		<li>Turn off electricity at the main switch in the building before evacuating and also lock your house.</li>
+		<p>Source: PAGASA Flood Advisory </p>
+		</ul>
+	</details>
+</div>
+
+<div class = "information-during">
+	<h2>What to do during a flood:</h2>
+	<img src="warning.png" alt="icon what to do during">
+	<details>
+	<ul>
+		<li>Avoid areas prone to sudden flooding.</li>
+		<li>Do not attempt to cross rivers, flowing streams, or floods in general where water is above the knee.</li>
+		<li>Beware of water-covered roads and bridges.</li>
+		<li>Stay indoors as much as possible to avoid danger from rain, wind or floodwaters.</li>
+		<li>Do not go swimming or boating in flooded rivers.</li>
+		<li>Drink clean or preferably boiled water only.</li>
+		<li>Eat only well-cooked food. Protect your food against contamination.</li>
+		<p>Source: PAGASA Flood Advisory </p>
+	</ul>
+	</details>
+</div>
+
+<div class = "information-after">
+	<h2>What to do after a flood:</h2>
+	<img src="home.png" alt="icon aftermath">
+	<details>
+	<ul>
+		<li>Re-enter areas with caution using flashlights, not lanterns or torchers. Flammables may be inside.</li>
+		<li>Be alert for fire hazards like broken wires.</li>
+		<li>Do not eat food and drink water until they have been checked for flood water contamination.</li>
+		<li>Report broken utility lines (electricity, water, gas and telephone) to appropriate agencies authorities.</li>
+		<li>Do not turn on the main switch or use appliances and other equipment until they have been checked by a licensed electrician.</li>
+		<li>Consult health authorities for immunization requirements.</li>
+		<li>Do not go in areas with disasters. Your presence might delay rescue and other emergency operations.</li>
+		<p>Source: PAGASA Flood Advisory </p>
+	</ul>
+	</details>
+</div>
+
+</div>
+</div>
+</div>
+
+<div class="footer">
+	<a href="https://forms.gle/MZgSkUU21c2BqPBa7" target="_blank" rel="no-opener"><button>
+		Answer the online survey here.
+	</button></a>
+	<details>
+	<summary style="cursor: pointer; font-weight: bold;">Credits and Data Sources</summary>
+<ul style="list-style: none; padding: 0; margin: 10px, 0;">
+	<li>OpenWeatherMap API - Weather Data and Forecasting</li>
+	<li>Windy.com - Weather Map</li>
+	<li>Philippine Atmospheric Geophysical Astronomical Services Administration (PAGASA) - Flood Advisory</li>
+	<li>National Geographic Education - Definition of weather-related terms.</li>
+</ul>
+</details>
+	<details>
+	<summary style="cursor: pointer; font-weight: bold;">Weather Glosarry</summary>
+	<ul style="list-style: none; padding: 0; margin: 10px, 0;">
+		<li>Temperature - Measure of how hot or cold. </li>
+		<li>Rainfall - Amount of rain falling in an area within a time. </li>
+		<li>Wind speed - Measure on the rate of air movement in an atmosphere. </li>
+		<li>Humidity - Amount of water vapor (a gas-like liquid) present in the air.</li>
+	</ul>
+	</details>
+</div>
+
+</div>
+</body>
+</html>
