@@ -43,7 +43,7 @@ const getfloodimpact = (rainfall) => {
 	else if (rainfall >= 7.5 && rainfall < 15) {
 		return "Ankle-deep floodings are possible. Yellow rainfall warning.";
 	}
-	else if (rainfall < 15 && rainfall < 30) {
+	else if (rainfall >= 15 && rainfall < 30) {
 		return "Waist-deep floodings are possible. Orange rainfall warning";
 	}
 	else {
@@ -52,7 +52,7 @@ const getfloodimpact = (rainfall) => {
 };
 
 const getRainFallData = (lat, lon) => {
-	const API_URL = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&hourly=precipitation&timezone=auto`
+	const API_URL = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&hourly=precipitation&timezone=auto&model=gfs`
 	fetch(API_URL)
 	.then(response => response.json())
 	.then(data => {
@@ -67,27 +67,6 @@ const getRainFallData = (lat, lon) => {
 		floodDiv.innerHTML = `<p>Error fetching rainfall data!</p>`;
 	});
 };
-
-const getFiveDayRainfall = (lat, lon) => {
-	const API_URL = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&hourly=precipitation&timezone=auto`
-	fetch(API_URL)
-	.then(response => response.json())
-	.then(data => {
-		const days = data.daily.time;
-		const rainfall = data.daily.precipitation_sum;
-
-		let html = `<ul>`;
-		for (let i = 0; i < days.length; i++) {
-			const impact = getfloodimpact(rainfall[i]);
-			html += `<li>
-			<strong>${days[i]}</strong>: ${rainfall[i]} mm
-			<br><span style = "color:red">${impact}</span>
-			
-			</li>`;
-		}
-	})
-		
-}
 
 	const getWeatherDetails = (cityName, latitude, longitude) => {
 		const WEATHER_API_URL = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${API_KEY}`;
@@ -124,7 +103,7 @@ const getFiveDayRainfall = (lat, lon) => {
 })
 .catch((err) => {
 		console.error("Weather fetch error:", err);
-		currentWeatherDiv = `<p>Error in loading weather data. Please try again later.</p>`
+		currentWeatherDiv= `<p>Error in loading weather data. Please try again later.</p>`
 	});
 }
 	const getCityCoordinates = () => {
